@@ -1,0 +1,15 @@
+# Secrets, credentials & environment files
+*.key
+*.pem
+*.token
+*.secret
+.env*
+*credentials*
+
+# Backup & temporary files
+*.bak
+*.bak.*
+*.tmp
+*.swp
+*~
+.DS_Store

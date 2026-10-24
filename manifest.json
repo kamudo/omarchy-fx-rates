@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "fx-rates",
+  "name": "Currency FX",
+  "version": "1.0.0",
+  "author": "kka",
+  "description": "Live currency exchange rates and interactive historical charts",
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "BarWidget.qml"
+  },
+  "barWidget": {
+    "displayName": "Currency FX",
+    "description": "Live currency exchange rates and interactive historical charts",
+    "category": "Finance",
+    "defaultSection": "center",
+    "allowMultiple": false
+  }
+}
