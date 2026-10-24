@@ -1,12 +1,14 @@
-# Currency FX Widget for Omarchy Linux
+# Currency FX Widget for Omarchy Linux (MacBook Pro & Keyboard-Driven)
 
 A native status bar widget and interactive dashboard for [Omarchy Linux](https://omarchy.org/) (Hyprland + Quickshell) providing live currency exchange rates, historical trend charts, currency pair cycling, and a quick converter.
 
 Optimized for keyboard-driven workflows and **MacBook Pro** setups where physical right-click or middle-click buttons are absent: **100% of the widget's capabilities are fully controllable from the keyboard**.
 
+Repository: **https://github.com/kamudo/fx-rates**
+
 ---
 
-## Features
+## Key Features
 
 - **Live Status Bar Pill**: Displays current currency pair, live exchange rate, and directional trend arrow (`▲` / `▼`) with color cues.
 - **Interactive Historical Chart**: Smooth Bezier curve visualization for 7-day, 1-month, 3-month, and 1-year windows.
@@ -25,7 +27,7 @@ Optimized for keyboard-driven workflows and **MacBook Pro** setups where physica
 Omarchy Linux includes built-in support for git-managed shell plugins:
 
 ```bash
-omarchy plugin add https://github.com/<your-username>/fx-rates.git --enable
+omarchy plugin add https://github.com/kamudo/fx-rates.git --enable
 ```
 
 This will automatically:
@@ -39,7 +41,7 @@ Clone directly into your user plugin directory:
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/<your-username>/fx-rates.git ~/.config/omarchy/plugins/fx-rates
+git clone https://github.com/kamudo/fx-rates.git ~/.config/omarchy/plugins/fx-rates
 
 # 2. Validate the plugin manifest
 omarchy plugin validate ~/.config/omarchy/plugins/fx-rates
@@ -162,6 +164,27 @@ omarchy-shell fx-rates close
 ├── Model.js        # Currency definitions, math utils, and API response parsing
 ├── README.md       # Plugin documentation
 └── .gitignore      # Git exclusion rules ensuring no secrets or temp files
+```
+
+---
+
+## 7. How to Push to GitHub (https://github.com/kamudo)
+
+The local Git repository is initialized on branch `main` at `~/.config/omarchy/plugins/fx-rates` with remote origin set to `https://github.com/kamudo/fx-rates.git`.
+
+### If using GitHub CLI (`gh`):
+```bash
+gh auth login
+cd ~/.config/omarchy/plugins/fx-rates
+gh repo create kamudo/fx-rates --public --source=. --remote=origin --push
+```
+
+### If creating the repo on https://github.com/new:
+1. Create a new repository named `fx-rates` under your `kamudo` account on GitHub.
+2. Push your local commits:
+```bash
+cd ~/.config/omarchy/plugins/fx-rates
+git push -u origin main
 ```
 
 ---
